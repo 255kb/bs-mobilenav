@@ -1,0 +1,23 @@
+.bs-mobilenav {
+  padding-top: 15px;
+  overflow-y: auto;
+}
+@media (max-width: 991px) {
+  .bs-mobilenav {
+    position: fixed;
+    top: 0;
+    left: -243px;
+    z-index: 100;
+    height: 100%;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.23), 0 3px 10px rgba(0, 0, 0, 0.16);
+  }
+}
+.bs-mobilenav-backdrop {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+}

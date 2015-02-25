@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Boostrap Mobile Nav Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="dist/bs-mobilenav.min.css">
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-4 bs-mobilenav">
+                <ul class="nav nav-pills nav-stacked">
+                    <li class="active"><a href="#">Menu item</a></li>
+                    <li><a href="#">Menu item</a></li>
+                    <li><a href="#">Menu item</a></li>
+                    <li><a href="#">Menu item</a></li>
+                    <li><a href="#">Menu item</a></li>
+                    <li><a href="#">Menu item</a></li>
+                    <li><a href="#">Menu item</a></li>
+                    <li><a href="#">Menu item</a></li>
+                    <li><a href="#">Menu item</a></li>
+                    <li><a href="#">Menu item</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-9 col-md-8">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h3>
+                            Boostrap Mobile Nav Demo
+                        </h3>
+                        <p>
+                            <h4>Toggle menu through data attribute</h4>
+                            <button class="btn btn-default btn-sm" data-toggle="bs-mobilenav" type="button">Toggle</button>
+                        </p>
+                        <p>
+                            <h4>Show menu programmatically</h4>
+                            <button class="btn btn-default btn-sm bs-mobilenav-show" type="button">Show</button>
+                        </p>
+                        <p class="alert alert-info hidden-xs hidden-sm">Please resize your browser to 'xs' or 'sm' sizes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="lib/jquery.touchSwipe.min.js"></script>
+    <script src="dist/bs-mobilenav.min.js"></script>
+
+    <script>
+        $(function() {
+            BSMobilenav.init({
+                swipe: true,
+                menuColor: '#fff',
+                menuWidth: 240,
+                backdropColor: 'rgba(0, 0, 0, 0.2)'
+            });
+
+            $(document).on('click', '.bs-mobilenav-show', function() {
+                BSMobilenav.showMenu();
+            });
+        });
+    </script>
+
+    <a href="https://github.com/255kb/bs-mobilenav"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
+
+</body>
+</html>

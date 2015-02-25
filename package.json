@@ -1,0 +1,27 @@
+{
+  "name": "bs-mobilenav",
+  "version": "1.0.0",
+  "description": "BS-Mobilenav is a package allowing you to create a mobile friendly and swipeable menu from any regular Boostrap grid element.",
+  "author": "Guillaume <hi@guillaumemonnet.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/255kb/bs-mobilenav"
+  },
+  "homepage": "https://github.com/255kb/bs-mobilenav",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "~2.1.3",
+    "bootstrap": "~3.3.2",
+    "jquery-touchswipe": "~1.6.7"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-bower": "^0.17.0",
+    "grunt-contrib-copy": "^0.7.0",
+    "grunt-contrib-jshint": "^0.11.0",
+    "grunt-contrib-less": "^1.0.0",
+    "grunt-contrib-cssmin": "^0.12.2",
+    "grunt-contrib-uglify": "^0.7.0",
+    "grunt-contrib-watch": "^0.6.1"
+  }
+}

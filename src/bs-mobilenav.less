@@ -1,18 +1,23 @@
+@menu-width: 240px;
+@menu-shadow-width: 3px;
+
 .bs-mobilenav{
   padding-top: 15px;
-  padding-top: 15px;
   overflow-y: auto;
+
   @media (max-width: 991px) {
-      position: fixed;
-      top: 0;
-      left: -243px;
-      z-index: 100;
-      height: 100%;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.23), 0 3px 10px rgba(0, 0, 0, 0.16);
+    position: fixed;
+    top: 0;
+    width: @menu-width; // menu width in mobile mode (default to 240px)
+    left: -(@menu-width + @menu-shadow-width); // change according to the menu width
+    z-index: 100;
+    height: 100%;
+    box-shadow: @menu-shadow-width 0 5px rgba(0, 0, 0, 0.23);
+    background-color: #fff; // menu background color in mobile mode (default to white)
   }
 }
 .bs-mobilenav-backdrop{
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.2); // menu backdrop background color
   width: 100%;
   height: 100%;
   position: fixed;

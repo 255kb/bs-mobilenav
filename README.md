@@ -19,14 +19,9 @@ You can install BS-Mobilenav with Bower:
 You need to initialize the menu before using it. Use the `init()` function with the following options:
 
     var options = {
-        swipe: true,                        // switch the swipe gestures (left/right) on or off
-        menuColor: '#fff',                  // change the menu background color in mobile mode (default to white)
-        menuWidth: 240,                     // change the menu width in mobile mode (default to 240px)
-        backdropColor: 'rgba(0, 0, 0, 0.2)',// change the backdrop color
+        swipe: true                        // switch the swipe gestures (left/right) on or off
     };
     BSMobilenav.init(options);
-
-All these options does not affect your "menu" element when not in mobile mode.
 
 ###2. Needed DOM elements
 
@@ -51,12 +46,32 @@ All you need to add besides the plugin initialization is a grid element with the
 
 Be careful to properly size your main content in mobile/tablet mode (here with `class="col-lg-9 col-md-8"`) as the menu will be removed from the flow for XS and SM screen sizes as defined by Bootstrap.
 
-###3. Show/hide the menu programmatically
+###3. CSS customization
+
+You can customize the CSS in order to change the menu background color, width and the backdrop color:
+
+    .bs-mobilenav{
+        ...
+        @media (max-width: 991px) {
+                ...
+                width: 240px; // menu width in mobile mode (default to 240px)
+                left: -243px; // change according to the menu width (includes the shadow width)
+                background-color: #fff; // menu background color in mobile mode (default to white)
+                ...
+            }
+        }
+
+    .bs-mobilenav-backdrop{
+        background-color: rgba(0, 0, 0, 0.2); // menu backdrop background color
+        ...
+    }
+
+###4. Show/hide the menu programmatically
 
     BSMobilenav.show();
     BSMobilenav.hide();
 
-###4. Toggle the menu using data-toggle attribute
+###5 Toggle the menu using data-toggle attribute
 
 In order to toggle the menu you can use `data-toggle="bs-mobilenav"` on any element, like this:
 

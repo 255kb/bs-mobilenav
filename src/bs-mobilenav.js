@@ -16,10 +16,7 @@
 }(this, function ($) {
     'use strict';
     var defaultOptions = {
-            swipe: true,
-            menuColor: '#fff',
-            menuWidth: 240,
-            backdropColor: 'rgba(0, 0, 0, 0.2)'
+            swipe: true
         },
         currentOptions,
         isOpen = false;
@@ -40,7 +37,7 @@
         isOpen = false;
     };
     var reinitMobile = function() {
-        $('.bs-mobilenav').css({left: -currentOptions.menuWidth-3});
+        $('.bs-mobilenav').css({left: -$('.bs-mobilenav').outerWidth()-3});
         $('.bs-mobilenav-backdrop').fadeOut(300);
         isOpen = false;
     };
@@ -51,9 +48,6 @@
 
             //append html elements to check screen size + backdrop
             $('body').append('<div class="bs-mobilenav-tools"><div class="device-xs visible-xs"></div><div class="device-sm visible-sm"></div><div class="device-md visible-md"></div><div class="device-lg visible-lg"></div></div><div class="bs-mobilenav-backdrop"></div>');
-
-            //set backdrop color
-            $('.bs-mobilenav-backdrop').css({'background-color': currentOptions.backdropColor});
 
             //initialize listener for data attribute
             $(document).on('click', '[data-toggle=bs-mobilenav]', function() {
@@ -98,7 +92,7 @@
         showMenu: function() {
             if(screenAuthorized()) {
                 if(!isOpen) {
-                    $('.bs-mobilenav').css({'background-color': currentOptions.menuColor, width: currentOptions.menuWidth}).animate({left: 0}, 300);
+                    $('.bs-mobilenav').animate({left: 0}, 300);
                     $('.bs-mobilenav-backdrop').fadeIn(300);
                     isOpen = true;
                 }
@@ -107,7 +101,7 @@
         hideMenu: function() {
             if(screenAuthorized()) {
                 if(isOpen) {
-                    $('.bs-mobilenav').animate({left: -currentOptions.menuWidth-3}, 300);
+                    $('.bs-mobilenav').animate({left: -$('.bs-mobilenav').outerWidth()-3}, 300);
                     $('.bs-mobilenav-backdrop').fadeOut(300);
                     isOpen = false;
                 }

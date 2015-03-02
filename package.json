@@ -1,7 +1,7 @@
 {
   "name": "bs-mobilenav",
   "version": "1.0.0",
-  "description": "BS-Mobilenav is a package allowing you to create a mobile friendly and swipeable menu from any regular Boostrap grid element.",
+  "description": "BS-Mobilenav is a package allowing you to create a mobile friendly and swipeable menu from any regular Bootstrap grid element.",
   "author": "Guillaume <hi@guillaumemonnet.com>",
   "repository": {
     "type": "git",

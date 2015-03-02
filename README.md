@@ -1,6 +1,6 @@
 #Mobile navigation menu for Bootstrap
 
-BS-Mobilenav is a package allowing you to create a mobile friendly and swipeable menu from any regular Boostrap grid element. [View a demo](http://255kb.github.io/bs-mobilenav/)
+BS-Mobilenav is a package allowing you to create a mobile friendly and swipeable menu from any regular Bootstrap grid element. [View a demo](http://255kb.github.io/bs-mobilenav/)
 
 ##Dependencies
 - jQuery
